@@ -5,9 +5,11 @@ echo "Swich to Debian unstable? [yes,no]"
 read input
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
-if [[ $input == "yes" ]]; then
+if [ $input == "yes" ]; then
+    echo "yes"
     cp sources-unstable.list /etc/apt/sources.list
 else
+    echo "no"
     cp sources.list /etc/apt/sources.list
 fi
 

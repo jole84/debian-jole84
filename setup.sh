@@ -16,7 +16,7 @@ apt update -y
 apt dist-upgrade -y
 
 # install packages
-apt install \
+apt install -y \
 aisleriot \
 ark \
 bash-completion \
@@ -59,3 +59,5 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # install rclone
 curl https://rclone.org/install.sh | sudo bash
 rclone genautocomplete bash
+
+echo "Install complete!"

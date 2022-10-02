@@ -16,7 +16,35 @@ apt update -y
 apt dist-upgrade -y
 
 # install packages
-apt install gcc make perl linux-headers-amd64 bsdmainutils flatpak git firmware-linux network-manager gdebi synaptic bash-completion kde-plasma-desktop plasma-nm ark python3-pip curl ffmpeg cmus sddm-theme-debian-breeze paper-icon-theme materia-gtk-theme materia-kde
+apt install \
+gcc \
+make \
+perl \
+linux-headers-amd64 \
+bsdmainutils \
+flatpak \
+git \
+firmware-linux \
+network-manager \
+gdebi \
+synaptic \
+bash-completion \
+kde-plasma-desktop \
+plasma-nm \
+ark \
+python3-pip \
+curl \
+ffmpeg \
+cmus \
+sddm-theme-debian-breeze \
+paper-icon-theme \
+materia-gtk-theme \
+materia-kde \
+system-config-printer \
+cups \
+rsync \
+gwenview \
+plasma-discover-backend-flatpak
 
 # install chrome browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb

@@ -16,8 +16,8 @@ apt update -y
 apt dist-upgrade -y
 
 # install packages
-aisleriot \
 apt install \
+aisleriot \
 ark \
 bash-completion \
 bsdmainutils \

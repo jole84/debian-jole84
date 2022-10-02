@@ -44,7 +44,9 @@ system-config-printer \
 cups \
 rsync \
 gwenview \
-plasma-discover-backend-flatpak
+plasma-discover-backend-flatpak \
+aisleriot \
+gnome-cards-data
 
 # install chrome browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb

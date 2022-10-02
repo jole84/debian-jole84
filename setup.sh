@@ -16,37 +16,37 @@ apt update -y
 apt dist-upgrade -y
 
 # install packages
+aisleriot \
 apt install \
-gcc \
-make \
-perl \
-linux-headers-amd64 \
-bsdmainutils \
-flatpak \
-git \
-firmware-linux \
-network-manager \
-gdebi \
-synaptic \
-bash-completion \
-kde-plasma-desktop \
-plasma-nm \
 ark \
-python3-pip \
+bash-completion \
+bsdmainutils \
+cmus \
+cups \
 curl \
 ffmpeg \
-cmus \
-sddm-theme-debian-breeze \
-paper-icon-theme \
+firmware-linux \
+flatpak \
+gcc \
+gdebi \
+git \
+gnome-cards-data \
+gwenview \
+kde-plasma-desktop \
+linux-headers-amd64 \
+make \
 materia-gtk-theme \
 materia-kde \
-system-config-printer \
-cups \
-rsync \
-gwenview \
+network-manager \
+paper-icon-theme \
+perl \
 plasma-discover-backend-flatpak \
-aisleriot \
-gnome-cards-data
+plasma-nm \
+python3-pip \
+rsync \
+sddm-theme-debian-breeze \
+synaptic \
+system-config-printer
 
 # install chrome browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb

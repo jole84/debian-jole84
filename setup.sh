@@ -54,3 +54,7 @@ apt install -f -y
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# install rclone
+curl https://rclone.org/install.sh | sudo bash
+rclone genautocomplete bash

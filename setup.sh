@@ -12,6 +12,7 @@ else
 fi
 
 # install packages
+apt update
 apt install gcc make perl linux-headers-amd64 bsdmainutils flatpak git firmware-linux network-manager gdebi synaptic bash-completion kde-plasma-desktop plasma-nm ark python3-pip curl ffmpeg cmus sddm-theme-debian-breeze paper-icon-theme materia-gtk-theme materia-kde
 
 # install chrome browser

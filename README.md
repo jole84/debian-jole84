@@ -5,6 +5,11 @@ Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/uno
 
 #### Install minimal Debian without any desktop
 
+_Clone git repository_
+```
+git clone https://github.com/jole84/debian-jole84.git
+```
+
 _Run as ROOT_
 ```
 sudo ./setup.sh

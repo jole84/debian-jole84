@@ -6,7 +6,7 @@ if [[ $(id -u) -ne 0 ]] ; then
 fi
 
 # Debian sources
-echo "Swich to Debian unstable? [yes,no]"
+echo "Swich to Debian unstable? [yes,NO]"
 read input
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -41,6 +41,7 @@ make \
 materia-gtk-theme \
 materia-kde \
 network-manager \
+openssh-server \
 paper-icon-theme \
 perl \
 plasma-discover-backend-flatpak \
@@ -62,5 +63,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # install rclone
 curl https://rclone.org/install.sh | sudo bash
 rclone genautocomplete bash
+
+# install yt-dlp
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 echo "Install complete!"

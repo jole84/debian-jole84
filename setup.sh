@@ -6,8 +6,8 @@ if [[ $(id -u) -ne 0 ]] ; then
 fi
 
 # Debian sources
-echo "Select release: [1:testing, 2:unstable, else:stable]"
-read Release
+read -p "Select release: [1:testing, 2:unstable, else:stable]" Release
+read -p "Select desktop environment: [plasma, gnome, cinnamon]" Desktop
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 if [ $Release == "1" ]; then
@@ -17,12 +17,10 @@ elif [ $Release == "2" ]; then
 else
     cp sources.list /etc/apt/sources.list
 fi
-apt update -y
+apt update
 apt dist-upgrade -y
 
-echo "Select desktop: [plasma, gnome, cinnamon]"
-read Desktop
-
+# install selected desktop environment
 if [ $Desktop == "plasma" ]; then
     apt install -y \
     gwenview \
@@ -30,7 +28,7 @@ if [ $Desktop == "plasma" ]; then
     plasma-discover-backend-flatpak \
     plasma-nm \
     sddm-theme-debian-breeze \
-    materia-kde \
+    materia-kde
 elif [ $Desktop == "gnome" ]; then
     apt install -y \
     gnome-core \
@@ -90,3 +88,5 @@ sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o
 sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 echo "Install complete!"
+sleep 5
+reboot

@@ -6,17 +6,44 @@ if [[ $(id -u) -ne 0 ]] ; then
 fi
 
 # Debian sources
-echo "Swich to Debian unstable? [yes,NO]"
-read input
+echo "Select release: [1:testing, 2:unstable, else:stable]"
+read Release
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
-if [ $input == "yes" ]; then
+if [ $Release == "1" ]; then
+    cp sources-testing.list /etc/apt/sources.list
+elif [ $Release == "2" ]; then
     cp sources-unstable.list /etc/apt/sources.list
 else
     cp sources.list /etc/apt/sources.list
 fi
 apt update -y
 apt dist-upgrade -y
+
+echo "Select desktop: [plasma, gnome, cinnamon]"
+read Desktop
+
+if [ $Desktop == "plasma" ]; then
+    apt install -y \
+    gwenview \
+    kde-plasma-desktop \
+    plasma-discover-backend-flatpak \
+    plasma-nm \
+    sddm-theme-debian-breeze \
+    materia-kde \
+elif [ $Desktop == "gnome" ]; then
+    apt install -y \
+    gnome-core \
+    gnome-software \
+    gnome-software-plugin-flatpak
+elif [ $Desktop == "cinnamon" ]; then
+    apt install -y \
+    cinnamon \
+    gnome-software \
+    gnome-software-plugin-flatpak
+else
+    exit
+fi
 
 # install packages
 apt install -y \
@@ -34,21 +61,15 @@ gcc \
 gdebi \
 git \
 gnome-cards-data \
-gwenview \
-kde-plasma-desktop \
 linux-headers-amd64 \
 make \
 materia-gtk-theme \
-materia-kde \
 network-manager \
 openssh-server \
 paper-icon-theme \
 perl \
-plasma-discover-backend-flatpak \
-plasma-nm \
 python3-pip \
 rsync \
-sddm-theme-debian-breeze \
 synaptic \
 system-config-printer \
 vlc

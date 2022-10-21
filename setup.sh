@@ -45,36 +45,52 @@ fi
 
 # install packages
 apt install -y \
-aisleriot \
-ark \
-bash-completion \
-bsdmainutils \
-cmus \
-cups \
-curl \
-ffmpeg \
-firmware-linux \
-flatpak \
-gcc \
-gdebi \
-git \
-gnome-cards-data \
-linux-headers-amd64 \
-make \
-materia-gtk-theme \
-network-manager \
-openssh-server \
-paper-icon-theme \
-perl \
-python3-pip \
-rsync \
-synaptic \
-system-config-printer \
-vlc
+    adb \
+    aisleriot \
+    ark \
+    bash-completion \
+    bsdmainutils \
+    cmus \
+    cpu-x \
+    cups \
+    curl \
+    fastboot \
+    ffmpeg \
+    firmware-linux \
+    flatpak \
+    gcc \
+    gdebi \
+    git \
+    gnome-cards-data \
+    linux-headers-amd64 \
+    make \
+    materia-gtk-theme \
+    neofetch \
+    network-manager \
+    openssh-server \
+    paper-icon-theme \
+    perl \
+    python3-pip \
+    rsync \
+    synaptic \
+    system-config-printer \
+    tmux \
+    vlc
 
 # install chrome browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb
 apt install -f -y
+
+# install gdal stuff
+apt install -y \
+    gdal-bin \
+    libgdal-dev \
+    libprotobuf-dev \
+    osmium-tool \
+    osmosis \
+    protobuf-compiler \
+    python3-gdal \
+    python3-protobuf
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

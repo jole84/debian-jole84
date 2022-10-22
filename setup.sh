@@ -23,27 +23,36 @@ apt dist-upgrade -y
 # install selected desktop environment
 if [ $Desktop == "plasma" ]; then
     apt install -y \
-    gwenview \
-    kde-plasma-desktop \
-    plasma-discover-backend-flatpak \
-    plasma-nm \
-    sddm-theme-debian-breeze \
-    materia-kde
+        gwenview \
+        kde-plasma-desktop \
+        materia-kde \
+        plasma-discover-backend-flatpak \
+        plasma-nm \
+        sddm-theme-debian-breeze \
+        software-properties-kde
 elif [ $Desktop == "gnome" ]; then
     apt install -y \
-    gnome-core \
-    gnome-software \
-    gnome-software-plugin-flatpak
+        gnome-core \
+        gnome-software \
+        gnome-software-plugin-flatpak \
+        software-properties-gtk
 elif [ $Desktop == "cinnamon" ]; then
     apt install -y \
-    cinnamon \
-    gnome-software \
-    gnome-software-plugin-flatpak
+        cinnamon \
+        gnome-software \
+        gnome-software-plugin-flatpak \
+        software-properties-gtk
 elif [ $Desktop == "xfce" ]; then
     apt install -y \
-    xfce4 \
-    gnome-software \
-    gnome-software-plugin-flatpak
+        gnome-software \
+        gnome-software-plugin-flatpak \
+        lightdm-gtk-greeter-settings \
+        software-properties-gtk \
+        xfce4 \
+        xfce4-battery-plugin \
+        xfce4-power-manager \
+        xfce4-terminal \
+        xfce4-whiskermenu-plugin
 else
     exit
 fi
@@ -77,7 +86,6 @@ apt install -y \
     perl \
     python3-pip \
     rsync \
-    software-properties-gtk \
     synaptic \
     system-config-printer \
     tmux \

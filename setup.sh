@@ -7,7 +7,7 @@ fi
 
 # Debian sources
 read -p "Select release: [1:testing, 2:unstable, else:stable]" Release
-read -p "Select desktop environment: [plasma, gnome, cinnamon]" Desktop
+read -p "Select desktop environment: [plasma, gnome, cinnamon, xfce]" Desktop
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 if [ $Release == "1" ]; then
@@ -37,6 +37,11 @@ elif [ $Desktop == "gnome" ]; then
 elif [ $Desktop == "cinnamon" ]; then
     apt install -y \
     cinnamon \
+    gnome-software \
+    gnome-software-plugin-flatpak
+elif [ $Desktop == "xfce" ]; then
+    apt install -y \
+    xfce4 \
     gnome-software \
     gnome-software-plugin-flatpak
 else
@@ -72,6 +77,7 @@ apt install -y \
     perl \
     python3-pip \
     rsync \
+    software-properties-gtk \
     synaptic \
     system-config-printer \
     tmux \

@@ -80,6 +80,7 @@ apt install -y \
     linux-headers-amd64 \
     make \
     materia-gtk-theme \
+    mpv \
     neofetch \
     network-manager \
     openssh-server \
@@ -89,8 +90,7 @@ apt install -y \
     rsync \
     synaptic \
     system-config-printer \
-    tmux \
-    vlc
+    tmux
 
 # install chrome browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb

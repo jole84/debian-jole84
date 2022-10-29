@@ -76,6 +76,7 @@ apt install -y \
     gdebi \
     git \
     gnome-cards-data \
+    gnome-keyring \
     intel-media-va-driver-non-free \
     linux-headers-amd64 \
     make \

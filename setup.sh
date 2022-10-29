@@ -109,7 +109,7 @@ apt install -y \
     python3-protobuf
 
 # remove old intel driver
-apt remove xserver-xorg-video-intel
+apt remove xserver-xorg-video-intel -y
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

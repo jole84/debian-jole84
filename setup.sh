@@ -1,61 +1,17 @@
 #!/bin/bash
 
+# check if run as root
 if [[ $(id -u) -ne 0 ]] ; then 
     echo "Please run as root"
     exit 1 
 fi
 
-# Debian sources
-read -p "Select release: [1:testing, 2:unstable, else:stable]" Release
-read -p "Select desktop environment: [plasma, gnome, cinnamon, xfce]" Desktop
+# update sources.list
+cp sources.list /etc/apt/sources.list
 
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
-if [ $Release == "1" ]; then
-    cp sources-testing.list /etc/apt/sources.list
-elif [ $Release == "2" ]; then
-    cp sources-unstable.list /etc/apt/sources.list
-else
-    cp sources.list /etc/apt/sources.list
-fi
+# update system
 apt update
 apt dist-upgrade -y
-
-# install selected desktop environment
-if [ $Desktop == "plasma" ]; then
-    apt install -y \
-        gwenview \
-        kde-plasma-desktop \
-        materia-kde \
-        plasma-discover-backend-flatpak \
-        plasma-nm \
-        sddm-theme-debian-breeze \
-        software-properties-kde
-elif [ $Desktop == "gnome" ]; then
-    apt install -y \
-        gnome-core \
-        gnome-software \
-        gnome-software-plugin-flatpak \
-        software-properties-gtk
-elif [ $Desktop == "cinnamon" ]; then
-    apt install -y \
-        cinnamon \
-        gnome-software \
-        gnome-software-plugin-flatpak \
-        software-properties-gtk
-elif [ $Desktop == "xfce" ]; then
-    apt install -y \
-        gnome-software \
-        gnome-software-plugin-flatpak \
-        lightdm-gtk-greeter-settings \
-        software-properties-gtk \
-        xfce4 \
-        xfce4-battery-plugin \
-        xfce4-power-manager \
-        xfce4-terminal \
-        xfce4-whiskermenu-plugin
-else
-    exit
-fi
 
 # install packages
 apt install -y \
@@ -77,24 +33,32 @@ apt install -y \
     git \
     gnome-cards-data \
     gnome-keyring \
+    gwenview \
     intel-media-va-driver-non-free \
+    kde-plasma-desktop \
     linux-headers-amd64 \
     make \
     materia-gtk-theme \
+    materia-kde \
     mpv \
     neofetch \
     network-manager \
     openssh-server \
     paper-icon-theme \
     perl \
+    plasma-discover-backend-flatpak \
+    plasma-nm \
     python3-pip \
     rsync \
+    sddm-theme-debian-breeze \
+    software-properties-kde \
     synaptic \
     system-config-printer \
     tmux
 
 # install chrome browser
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
 apt install -f -y
 
 # install gdal stuff
@@ -115,7 +79,7 @@ apt remove xserver-xorg-video-intel -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install rclone
-curl https://rclone.org/install.sh | sudo bash
+curl https://rclone.org/install.sh | bash
 rclone genautocomplete bash
 
 # install yt-dlp

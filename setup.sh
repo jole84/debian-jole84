@@ -20,6 +20,7 @@ apt install -y \
     ark \
     bash-completion \
     bsdmainutils \
+    cryptsetup \
     cmus \
     cpu-x \
     cups \

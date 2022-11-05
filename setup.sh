@@ -14,7 +14,7 @@ apt update
 apt dist-upgrade -y
 
 # install backported packages
-sudo apt install -t bullseye-backports \
+sudo apt install -y -t bullseye-backports \
     linux-image-amd64 \
     linux-headers-amd64 \
     firmware-linux

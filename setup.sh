@@ -13,6 +13,12 @@ cp sources.list /etc/apt/sources.list
 apt update
 apt dist-upgrade -y
 
+# install backported packages
+sudo apt install -t bullseye-backports \
+    linux-image-amd64 \
+    linux-headers-amd64 \
+    firmware-linux
+
 # install packages
 apt install -y \
     adb \
@@ -27,7 +33,6 @@ apt install -y \
     curl \
     fastboot \
     ffmpeg \
-    firmware-linux \
     flatpak \
     gcc \
     gdebi \
@@ -37,7 +42,6 @@ apt install -y \
     gwenview \
     intel-media-va-driver-non-free \
     kde-plasma-desktop \
-    linux-headers-amd64 \
     make \
     materia-gtk-theme \
     materia-kde \

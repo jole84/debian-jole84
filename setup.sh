@@ -7,6 +7,7 @@ if [[ $(id -u) -ne 0 ]] ; then
 fi
 
 # update sources.list
+cp /etc/apt/sources.list /etc/apt/sources.bak
 cp sources.list /etc/apt/sources.list
 
 # update system

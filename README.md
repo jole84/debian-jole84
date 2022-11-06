@@ -3,7 +3,8 @@
 
 Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-dvd/>
 
-#### Install minimal Debian without any desktop
+#### Install minimal Debian without any desktop  
+This install script will produce a minimal KDE Plasma desktop.
 
 _Clone git repository_
 ```

@@ -40,6 +40,7 @@ apt install -y \
     gnome-cards-data \
     gnome-keyring \
     gwenview \
+    htop \
     intel-media-va-driver-non-free \
     kde-plasma-desktop \
     make \

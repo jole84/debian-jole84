@@ -24,6 +24,7 @@ sudo apt install -y -t bullseye-backports \
 apt install -y \
     adb \
     aisleriot \
+    alsa-utils \
     ark \
     bash-completion \
     bsdmainutils \

@@ -28,7 +28,6 @@ apt install -y \
     bash-completion \
     bsdmainutils \
     cryptsetup \
-    cmus \
     cpu-x \
     cups \
     curl \
@@ -61,11 +60,12 @@ apt install -y \
     software-properties-kde \
     synaptic \
     system-config-printer \
-    tmux
+    tmux \
+    ufw
 
 # install chrome browser
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-dpkg -i google-chrome-stable_current_amd64.deb
+curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $HOME/google-chrome-stable_current_amd64.deb
+dpkg -i $HOME/google-chrome-stable_current_amd64.deb
 apt install -f -y
 
 # install gdal stuff
@@ -90,8 +90,14 @@ curl https://rclone.org/install.sh | bash
 rclone genautocomplete bash
 
 # install yt-dlp
-sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
+curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+chmod a+rx /usr/local/bin/yt-dlp  # Make executable
+
+# setup firewall
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow ssh
+ufw enable
 
 echo "Install complete!"
 sleep 5

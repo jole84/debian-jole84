@@ -32,6 +32,7 @@ apt install -y \
     cpu-x \
     cups \
     curl \
+    default-jre \
     fastboot \
     ffmpeg \
     flatpak \

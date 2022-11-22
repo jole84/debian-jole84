@@ -80,6 +80,7 @@ apt install -y \
     osmosis \
     protobuf-compiler \
     python3-gdal \
+    python3-lxml \
     python3-protobuf
 
 # remove old intel driver

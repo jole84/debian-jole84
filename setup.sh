@@ -15,7 +15,7 @@ apt update
 apt dist-upgrade -y
 
 # install backported packages
-sudo apt install -y -t bullseye-backports \
+apt install -y -t bullseye-backports \
     linux-image-amd64 \
     linux-headers-amd64 \
     firmware-linux
@@ -74,7 +74,6 @@ apt install -f -y
 # install gdal stuff
 apt install -y \
     gdal-bin \
-    libgdal-dev \
     libprotobuf-dev \
     osmium-tool \
     osmosis \
@@ -83,6 +82,8 @@ apt install -y \
     python3-lxml \
     python3-protobuf
 
+    # libgdal-dev \
+    
 # remove old intel driver
 apt remove xserver-xorg-video-intel -y
 

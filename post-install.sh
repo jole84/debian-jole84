@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# python
+mkdir ~/git
 pip install --upgrade --ignore-installed pip setuptools wheel
 
 pip install --upgrade pytz
@@ -17,4 +17,8 @@ flatpak install flathub org.sqlitebrowser.sqlitebrowser --assumeyes
 flatpak install flathub org.kde.kdenlive --assumeyes
 flatpak install flathub org.onlyoffice.desktopeditors --assumeyes
 
+exit
+
 sudo usermod -a -G vboxusers $USER
+ln -s ~/git/private/linux/bin/ ~/bin
+ln -s ~/git/private/linux/bash_aliases ~/.bash_aliases

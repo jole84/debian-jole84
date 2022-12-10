@@ -35,6 +35,7 @@ apt install -y \
     default-jre \
     fastboot \
     ffmpeg \
+    ffmpegthumbs \
     flatpak \
     fwupd \
     gcc \

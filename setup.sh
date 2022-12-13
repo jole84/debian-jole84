@@ -74,7 +74,6 @@ apt install -f -y
 
 # install gdal stuff
 apt install -y \
-    gdal-bin \
     libprotobuf-dev \
     osmium-tool \
     osmosis \
@@ -82,8 +81,6 @@ apt install -y \
     python3-gdal \
     python3-lxml \
     python3-protobuf
-
-    # libgdal-dev \
     
 # remove old intel driver
 apt remove xserver-xorg-video-intel -y

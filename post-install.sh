@@ -1,5 +1,7 @@
 #!/bin/bash
 
+/usr/bin/xdg-user-dirs-update
+
 mkdir ~/git
 pip install --upgrade --ignore-installed pip setuptools wheel
 

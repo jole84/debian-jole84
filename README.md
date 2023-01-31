@@ -11,7 +11,7 @@ _Clone git repository_
 git clone https://github.com/jole84/debian-jole84.git
 ```
 
-_Run as ROOT_
+_Run script_
 ```
-sudo ./setup.sh
+./setup.sh
 ```

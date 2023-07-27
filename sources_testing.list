@@ -1,5 +1,0 @@
-deb http://ftp.se.debian.org/debian/ testing main contrib non-free
-deb-src http://ftp.se.debian.org/debian/ testing main contrib non-free
-
-deb http://ftp.se.debian.org/debian/ testing-updates main contrib non-free
-deb-src http://ftp.se.debian.org/debian/ testing-updates main contrib non-free

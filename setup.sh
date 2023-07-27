@@ -9,13 +9,13 @@ sudo apt update
 sudo apt dist-upgrade -y
 
 # install backported packages
-sudo apt install -y -t bullseye-backports \
-    linux-image-amd64 \
-    linux-headers-amd64 \
-    firmware-linux
+# sudo apt install -y -t bullseye-backports \
+#     linux-image-amd64 \
+#     linux-headers-amd64 \
+#     firmware-linux
 
 # install packages
-sudo apt install -y \
+sudo apt install \
     adb \
     aisleriot \
     alsa-utils \
@@ -67,7 +67,8 @@ sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
 sudo apt install -f -y
 
 # install gdal stuff
-sudo apt install -y \
+sudo apt install \
+    gdal-bin \
     libprotobuf-dev \
     osmium-tool \
     osmosis \
@@ -77,7 +78,7 @@ sudo apt install -y \
     python3-protobuf
     
 # remove old intel driver
-sudo apt remove xserver-xorg-video-intel -y
+sudo apt remove xserver-xorg-video-intel
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

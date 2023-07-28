@@ -16,7 +16,7 @@ sudo apt dist-upgrade -y
 
 # install packages
 sudo apt install \
-    adb \
+    android-sdk-platform-tools \
     aisleriot \
     alsa-utils \
     ark \
@@ -27,7 +27,6 @@ sudo apt install \
     cups \
     curl \
     default-jre \
-    fastboot \
     ffmpeg \
     ffmpegthumbs \
     flatpak \

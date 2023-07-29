@@ -15,9 +15,8 @@ sudo apt dist-upgrade -y
 #     firmware-linux
 
 # install packages
-sudo apt install \
+sudo apt install -y \
     android-sdk-platform-tools \
-    aisleriot \
     alsa-utils \
     ark \
     bash-completion \
@@ -34,7 +33,6 @@ sudo apt install \
     gcc \
     gdebi \
     git \
-    gnome-cards-data \
     gnome-keyring \
     gwenview \
     htop \
@@ -66,7 +64,7 @@ sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
 sudo apt install -f -y
 
 # install gdal stuff
-sudo apt install \
+sudo apt install -y \
     gdal-bin \
     libprotobuf-dev \
     osmium-tool \

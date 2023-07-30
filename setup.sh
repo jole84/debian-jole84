@@ -21,6 +21,7 @@ sudo apt install -y \
     ark \
     bash-completion \
     bsdmainutils \
+    btrfs-progs \
     cryptsetup \
     cpu-x \
     cups \

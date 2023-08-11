@@ -82,7 +82,7 @@ sudo apt remove xserver-xorg-video-intel
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install rclone
-sudo curl https://rclone.org/install.sh | bash
+sudo curl https://rclone.org/install.sh | sudo bash
 sudo rclone genautocomplete bash
 
 # install yt-dlp

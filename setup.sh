@@ -54,7 +54,7 @@ sudo apt install -y \
     rsync \
     sddm-theme-debian-breeze \
     software-properties-gtk \
-    spectacle \
+    kde-spectacle \
     synaptic \
     system-config-printer \
     tmux \

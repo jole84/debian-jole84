@@ -10,8 +10,8 @@ sudo apt dist-upgrade
 
 # install packages
 sudo apt install \
-    android-sdk-platform-tools \
     alsa-utils \
+    android-sdk-platform-tools \
     bash-completion \
     bsdmainutils \
     btrfs-progs \
@@ -31,7 +31,9 @@ sudo apt install \
     gnome-software \
     gnome-software-plugin-flatpak \
     htop \
-    intel-media-va-driver-non-free \
+    intel-media-va-driver \
+    lightdm-gtk-greeter-settings \
+    linux-headers-amd64 \
     make \
     materia-gtk-theme \
     mpv \
@@ -95,5 +97,6 @@ dconf write /org/cinnamon/desktop/interface/gtk-theme "'Materia'"
 
 dconf write /org/cinnamon/desktop/media-handling/automount false
 dconf write /org/cinnamon/muffin/placement-mode "'pointer'"
+dconf write /org/cinnamon/desktop/privacy/remember-recent-files false
 
 echo "Install complete!"

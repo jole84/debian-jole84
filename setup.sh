@@ -16,14 +16,14 @@ sudo apt dist-upgrade -y
 
 # install packages
 sudo apt install -y \
-    android-sdk-platform-tools \
     alsa-utils \
+    android-sdk-platform-tools \
     ark \
     bash-completion \
     bsdmainutils \
     btrfs-progs \
-    cryptsetup \
     cpu-x \
+    cryptsetup \
     cups \
     curl \
     default-jre \
@@ -37,8 +37,10 @@ sudo apt install -y \
     gnome-keyring \
     gwenview \
     htop \
-    intel-media-va-driver-non-free \
+    intel-media-va-driver \
     kde-plasma-desktop \
+    kde-spectacle \
+    linux-headers-amd64 \
     make \
     materia-gtk-theme \
     materia-kde \
@@ -54,7 +56,6 @@ sudo apt install -y \
     rsync \
     sddm-theme-debian-breeze \
     software-properties-gtk \
-    kde-spectacle \
     synaptic \
     system-config-printer \
     tmux \

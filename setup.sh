@@ -15,7 +15,7 @@ sudo apt dist-upgrade -y
 #     firmware-linux
 
 # install packages
-sudo apt install -y \
+sudo apt install \
     alsa-utils \
     android-sdk-platform-tools \
     ark \
@@ -67,7 +67,7 @@ sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
 sudo apt install -f -y
 
 # install gdal stuff
-sudo apt install -y \
+sudo apt install \
     gdal-bin \
     libprotobuf-dev \
     osmium-tool \

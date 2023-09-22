@@ -87,9 +87,13 @@ sudo ufw enable
 # customisations
 sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/" /$HOME/.bashrc
 sudo sed -i "s/#greeter-hide-users=false/greeter-hide-users=false/" /etc/lightdm/lightdm.conf
+export DISPLAY=:0
 dconf write /org/cinnamon/muffin/tile-maximize true
 dconf write /org/cinnamon/theme/name "'Materia'"
 dconf write /org/cinnamon/desktop/interface/icon-theme "'Paper'"
 dconf write /org/cinnamon/desktop/interface/gtk-theme "'Materia'"
+
+dconf write /org/cinnamon/desktop/media-handling/automount false
+dconf write /org/cinnamon/muffin/placement-mode "'pointer'"
 
 echo "Install complete!"

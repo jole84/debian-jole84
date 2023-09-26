@@ -45,6 +45,7 @@ sudo apt install \
     materia-gtk-theme \
     materia-kde \
     mpv \
+    nala \
     neofetch \
     network-manager \
     openssh-server \

@@ -37,6 +37,7 @@ sudo apt install \
     make \
     materia-gtk-theme \
     mpv \
+    nala \
     neofetch \
     network-manager \
     openssh-server \

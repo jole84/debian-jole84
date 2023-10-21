@@ -9,7 +9,7 @@ sudo apt update
 sudo apt dist-upgrade -y
 
 # install backported packages
-# sudo apt install -y -t bullseye-backports \
+# sudo apt install -y -t bookworm-backports \
 #     linux-image-amd64 \
 #     linux-headers-amd64 \
 #     firmware-linux

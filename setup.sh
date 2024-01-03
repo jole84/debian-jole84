@@ -44,6 +44,7 @@ sudo apt install \
     make \
     materia-gtk-theme \
     materia-kde \
+    micro \
     mpv \
     nala \
     neofetch \

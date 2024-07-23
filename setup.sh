@@ -8,21 +8,13 @@ sudo cp sources.list /etc/apt/sources.list
 sudo apt update
 sudo apt dist-upgrade -y
 
-# install backported packages
-sudo apt install -t bookworm-backports \
-    linux-image-amd64 \
-    linux-headers-amd64 \
-    firmware-linux
-
 # install packages
 sudo apt install \
-    alsa-utils \
     android-sdk-platform-tools \
     ark \
     bash-completion \
     bsdmainutils \
     btrfs-progs \
-    cpu-x \
     cryptsetup \
     cups \
     curl \
@@ -45,7 +37,6 @@ sudo apt install \
     materia-gtk-theme \
     materia-kde \
     micro \
-    mpv \
     nala \
     neofetch \
     network-manager \
@@ -54,7 +45,6 @@ sudo apt install \
     perl \
     plasma-discover-backend-flatpak \
     plasma-nm \
-    python3-pip \
     rsync \
     sddm-theme-debian-breeze \
     software-properties-gtk \
@@ -65,26 +55,19 @@ sudo apt install \
     ufw
 
 # install chrome browser
-curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $HOME/google-chrome-stable_current_amd64.deb
-sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
+# curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $HOME/google-chrome-stable_current_amd64.deb
+# sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
 sudo apt install -f -y
-
-# install gdal stuff
-sudo apt install \
-    gdal-bin \
-    libprotobuf-dev \
-    osmium-tool \
-    osmosis \
-    protobuf-compiler \
-    python3-gdal \
-    python3-lxml \
-    python3-protobuf
     
-# remove old intel driver
-sudo apt remove xserver-xorg-video-intel
-
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub \
+    org.mozilla.firefox \
+    org.kde.gwenview \
+    org.sqlitebrowser.sqlitebrowser \
+    org.inkscape.Inkscape \
+    io.mpv.Mpv
 
 # install rclone
 sudo curl https://rclone.org/install.sh | sudo bash

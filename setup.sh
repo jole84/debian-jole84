@@ -16,7 +16,6 @@ sudo apt install -t bookworm-backports \
 
 # install packages
 sudo apt install \
-    apt-listchanges \
     alsa-utils \
     android-sdk-platform-tools \
     ark \

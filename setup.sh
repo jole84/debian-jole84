@@ -62,12 +62,14 @@ sudo apt install -f -y
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub \
+flatpak install flathub -y \
     org.mozilla.firefox \
     org.kde.gwenview \
     org.sqlitebrowser.sqlitebrowser \
     org.inkscape.Inkscape \
-    io.mpv.Mpv
+    io.mpv.Mpv \
+    io.github.shiftey.Desktop \
+    org.qgis.qgis
 
 # install rclone
 sudo curl https://rclone.org/install.sh | sudo bash

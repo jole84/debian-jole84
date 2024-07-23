@@ -16,6 +16,7 @@ sudo apt install -t bookworm-backports \
 
 # install packages
 sudo apt install \
+    apt-listchanges \
     alsa-utils \
     android-sdk-platform-tools \
     ark \
@@ -61,6 +62,7 @@ sudo apt install \
     synaptic \
     system-config-printer \
     tmux \
+    unattended-upgrades \
     ufw
 
 # install chrome browser

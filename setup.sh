@@ -38,7 +38,6 @@ sudo apt install \
     materia-kde \
     micro \
     nala \
-    neofetch \
     network-manager \
     openssh-server \
     paper-icon-theme \
@@ -68,7 +67,7 @@ flatpak install flathub -y \
     org.inkscape.Inkscape \
     org.kde.gwenview \
     org.mozilla.firefox \
-    org.qgis.qgis \
+    org.qgis.qgis//stable \
     org.sqlitebrowser.sqlitebrowser
 
 # install rclone

@@ -86,5 +86,6 @@ sudo ufw enable
 
 # customisations
 sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/" /$HOME/.bashrc
+echo "Defaults pwfeedback" | sudo tee /etc/sudoers.d/feedback
 
 echo "Install complete!"

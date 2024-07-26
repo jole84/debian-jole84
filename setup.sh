@@ -50,9 +50,8 @@ sudo apt install \
     synaptic \
     system-config-printer \
     tmux \
-    ufw \
-    unattended-upgrades
-
+    ufw 
+    
 # install chrome browser
 # curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $HOME/google-chrome-stable_current_amd64.deb
 # sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
@@ -61,7 +60,7 @@ sudo apt install -f -y
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub -y \
+flatpak install flathub --assumeyes --noninteractive \
     io.github.shiftey.Desktop \
     io.mpv.Mpv \
     org.inkscape.Inkscape \

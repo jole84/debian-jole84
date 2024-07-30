@@ -27,7 +27,6 @@ sudo apt install \
     gdebi \
     git \
     gnome-keyring \
-    gwenview \
     htop \
     intel-media-va-driver \
     kde-plasma-desktop \
@@ -53,18 +52,20 @@ sudo apt install \
     ufw 
     
 # install chrome browser
-# curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $HOME/google-chrome-stable_current_amd64.deb
-# sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
+curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $HOME/google-chrome-stable_current_amd64.deb
+sudo dpkg -i $HOME/google-chrome-stable_current_amd64.deb
 sudo apt install -f -y
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 flatpak install flathub --assumeyes --noninteractive \
+    com.github.tchx84.Flatseal \
     io.github.shiftey.Desktop \
     io.mpv.Mpv \
     org.inkscape.Inkscape \
     org.kde.gwenview \
+    org.kde.dolphin \
     org.mozilla.firefox \
     org.qgis.qgis//stable \
     org.sqlitebrowser.sqlitebrowser

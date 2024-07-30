@@ -59,7 +59,7 @@ sudo apt install -f -y
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub --assumeyes --noninteractive \
+sudo flatpak install flathub --assumeyes --noninteractive \
     com.github.tchx84.Flatseal \
     io.github.shiftey.Desktop \
     io.mpv.Mpv \

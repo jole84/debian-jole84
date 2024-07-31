@@ -87,7 +87,7 @@ sudo ufw enable
 # customisations
 sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/" /$HOME/.bashrc
 echo "Defaults pwfeedback" | sudo tee /etc/sudoers.d/feedback
-# mkdir ~/bin
+# mkdir -p ~/bin
 # curl -L https://github.com/topgrade-rs/topgrade/releases/download/v15.0.0/topgrade-v15.0.0-x86_64-unknown-linux-gnu.tar.gz | tar xz -C ~/bin
 
 echo "Install complete!"

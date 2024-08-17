@@ -22,6 +22,7 @@ sudo apt install \
     ffmpeg \
     ffmpegthumbs \
     flatpak \
+    fprintd \
     fwupd \
     gcc \
     gdebi \
@@ -31,6 +32,7 @@ sudo apt install \
     intel-media-va-driver \
     kde-plasma-desktop \
     kde-spectacle \
+    libpam-fprintd \
     linux-headers-amd64 \
     make \
     materia-gtk-theme \

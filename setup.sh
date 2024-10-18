@@ -21,6 +21,7 @@ sudo apt install \
     default-jre \
     ffmpeg \
     ffmpegthumbs \
+    fish \
     flatpak \
     fprintd \
     fwupd \
@@ -87,6 +88,7 @@ sudo ufw allow ssh
 sudo ufw enable
 
 # customisations
+chsh -s /usr/bin/fish
 sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/" /$HOME/.bashrc
 echo "Defaults pwfeedback" | sudo tee /etc/sudoers.d/feedback
 # mkdir -p ~/bin

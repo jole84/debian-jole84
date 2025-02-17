@@ -10,7 +10,6 @@ sudo apt dist-upgrade -y
 
 # install packages
 sudo apt install \
-    android-sdk-platform-tools \
     ark \
     bash-completion \
     bsdmainutils \
@@ -31,6 +30,7 @@ sudo apt install \
     gnome-keyring \
     htop \
     intel-media-va-driver \
+    kde-config-flatpak \
     kde-plasma-desktop \
     kde-spectacle \
     libpam-fprintd \
@@ -39,7 +39,6 @@ sudo apt install \
     materia-gtk-theme \
     materia-kde \
     micro \
-    nala \
     network-manager \
     openssh-server \
     paper-icon-theme \
@@ -52,6 +51,7 @@ sudo apt install \
     synaptic \
     system-config-printer \
     tmux \
+    qt5-style-kvantum \
     ufw 
     
 # install chrome browser
@@ -67,8 +67,6 @@ sudo flatpak install flathub --assumeyes --noninteractive \
     io.github.shiftey.Desktop \
     io.mpv.Mpv \
     org.inkscape.Inkscape \
-    org.kde.gwenview \
-    org.kde.dolphin \
     org.mozilla.firefox \
     org.qgis.qgis//stable \
     org.sqlitebrowser.sqlitebrowser

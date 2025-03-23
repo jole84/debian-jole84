@@ -18,6 +18,7 @@ sudo apt install \
     cups \
     curl \
     default-jre \
+    distrobox \
     ffmpeg \
     ffmpegthumbs \
     fish \
@@ -29,22 +30,19 @@ sudo apt install \
     git \
     gnome-keyring \
     htop \
-    intel-media-va-driver \
     kde-config-flatpak \
     kde-plasma-desktop \
     kde-spectacle \
     libpam-fprintd \
     linux-headers-amd64 \
     make \
-    materia-gtk-theme \
-    materia-kde \
     micro \
     network-manager \
     openssh-server \
-    paper-icon-theme \
     perl \
     plasma-discover-backend-flatpak \
     plasma-nm \
+    podman \
     rsync \
     sddm-theme-debian-breeze \
     software-properties-gtk \
@@ -63,11 +61,8 @@ sudo apt install -f -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 sudo flatpak install flathub --assumeyes --noninteractive \
-    com.github.tchx84.Flatseal \
     io.github.shiftey.Desktop \
     io.mpv.Mpv \
-    org.inkscape.Inkscape \
-    org.mozilla.firefox \
     org.qgis.qgis//stable \
     org.sqlitebrowser.sqlitebrowser
 
